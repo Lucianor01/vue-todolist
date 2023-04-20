@@ -20,6 +20,8 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+
+        testoInput: '',
         todos: [
           {
             text: 'Fare i compiti',
@@ -35,5 +37,8 @@ const { createApp } = Vue
           }
         ]
       }
-    }
+    },
+    methods: {
+      
+    },
   }).mount('#app')

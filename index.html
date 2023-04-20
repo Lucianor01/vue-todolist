@@ -15,13 +15,15 @@
         <div class="container">
             <div class="text-center mt-4">
                 <h1 class="pb-4 text-light">TODO LIST</h1>
-                <input type="text" class="form-control w-25 border-success d-inline-block" placeholder="Nuova Task">
-                <button type="button" class="btn btn-success ms-3">Crea Todo</button>
+                <input type="text" v-model="testoInput" class="form-control w-25 border-success d-inline-block" placeholder="Nuova Task">
+                <button type="button" class="btn btn-success ms-3" >Crea Todo</button>
             </div>
-            <div class="rounded container_todo p-4 mt-4 w-75 m-auto">
-                <div class="border-bottom border-black d-flex justify-content-between align-items-center px-3">
-                    <p>Fare i compiti</p>
+            <div class="rounded container_todo p-3 mt-4 w-75 m-auto">
+                <div v-for="(element, index) in todos"
+                :key="index" class="border-bottom border-black d-flex justify-content-between align-items-center px-3 mt-3 pb-1">
+                    <p class="m-0">{{ element.text }}</p>
                     <i class="fa-solid fa-xmark"></i>
+                </div>
                 </div>
             </div>
         </div>
