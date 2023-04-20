@@ -16,11 +16,12 @@
             <div class="text-center mt-4">
                 <h1 class="pb-4 text-light">TODO LIST</h1>
                 <input type="text" v-model="testoInput" class="form-control w-25 border-success d-inline-block" placeholder="Nuova Task">
-                <button type="button" class="btn btn-success ms-3" >Crea Todo</button>
+                <button type="button" class="btn btn-success ms-3" @click="todoList">Crea Todo</button>
             </div>
-            <div class="rounded container_todo p-3 mt-4 w-75 m-auto">
+            <div class="rounded bg-light-gray p-3 mt-4 w-75 m-auto">
                 <div v-for="(element, index) in todos"
-                :key="index" class="border-bottom border-black d-flex justify-content-between align-items-center px-3 mt-3 pb-1">
+                :key="index" class="border-bottom border-black d-flex justify-content-between align-items-center px-3 pt-3 pb-1" 
+                :class=" (index % 2 == 0) ? 'bg-light-gray' : 'bg-white'">
                     <p class="m-0">{{ element.text }}</p>
                     <i class="fa-solid fa-xmark"></i>
                 </div>

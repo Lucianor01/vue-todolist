@@ -35,10 +35,20 @@ const { createApp } = Vue
             text: 'Fare il bucato',
             done: false
           }
-        ]
+        ],
+        error: false,
       }
     },
     methods: {
-      
+      todoList(){
+        if (this.testoInput !='' && this.testoInput.length > 5){
+          this.todos.unshift({
+            text: this.testoInput,
+            done: false
+          })
+          this.testoInput = '';
+          this.error = false;
+        } 
+      }
     },
   }).mount('#app')
