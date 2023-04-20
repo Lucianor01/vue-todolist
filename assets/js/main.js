@@ -54,6 +54,14 @@ const { createApp } = Vue
       },
       removeTodoList(i){
         this.todos.splice(i, 1)
+      },
+      removeTextDecoration(decoration){
+        if (decoration.done) {
+          decoration.done = false;
+        } else {
+          decoration.done = true;
+        }
       }
+
     },
   }).mount('#app')

@@ -2,6 +2,10 @@
     background-color: lightgray;
 }
 
+.bg-light-gray .justify-content-between p{
+    cursor: pointer;
+}
+
 .fa-xmark{
     cursor: pointer;
 }
