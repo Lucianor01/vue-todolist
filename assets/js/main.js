@@ -51,6 +51,9 @@ const { createApp } = Vue
         } else{
           this.error = true
         }
+      },
+      removeTodoList(i){
+        this.todos.splice(i, 1)
       }
     },
   }).mount('#app')

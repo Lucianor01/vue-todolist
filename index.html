@@ -24,7 +24,7 @@
                 :key="index" class="border-bottom border-black d-flex justify-content-between align-items-center px-3 pt-3 pb-1" 
                 :class=" (index % 2 == 0) ? 'bg-light-gray' : 'bg-white'">
                     <p class="m-0">{{ element.text }}</p>
-                    <i class="fa-solid fa-xmark"></i>
+                    <i @click="removeTodoList(i)" class="fa-solid fa-xmark"></i>
                 </div>
                 </div>
             </div>
