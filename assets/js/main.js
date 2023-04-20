@@ -48,7 +48,9 @@ const { createApp } = Vue
           })
           this.testoInput = '';
           this.error = false;
-        } 
+        } else{
+          this.error = true
+        }
       }
     },
   }).mount('#app')

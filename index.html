@@ -15,7 +15,8 @@
         <div class="container">
             <div class="text-center mt-4">
                 <h1 class="pb-4 text-light">TODO LIST</h1>
-                <input type="text" v-model="testoInput" class="form-control w-25 border-success d-inline-block" placeholder="Nuova Task">
+                <input type="text" v-model="testoInput" @keyUp.enter="todoList"  
+                class="form-control w-25 border-success d-inline-block" placeholder="Nuova Task">
                 <button type="button" class="btn btn-success ms-3" @click="todoList">Crea Todo</button>
             </div>
             <div class="rounded bg-light-gray p-3 mt-4 w-75 m-auto">
