@@ -5,3 +5,7 @@
 .fa-xmark{
     cursor: pointer;
 }
+
+.text-decoration{
+    text-decoration:line-through;
+}
